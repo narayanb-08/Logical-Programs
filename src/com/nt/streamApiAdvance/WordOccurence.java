@@ -1,0 +1,54 @@
+package com.nt.streamApiAdvance;
+
+import java.util.Arrays;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class WordOccurence {
+public static void main(String[] args) {
+	String str = "I am learning java java";
+	
+	 Map<String, Long> collect = Arrays.stream(str.split(" "))
+			 						   .collect(Collectors.groupingBy(word->word,Collectors.counting()));
+	
+	System.out.println(collect);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Map<String, Long> result = Arrays.stream(str.split(" "))
+ * .collect(Collectors.groupingBy( word -> word,Collectors.counting()));
+ */
